@@ -1,0 +1,51 @@
+seed: 707
+device: auto
+
+data:
+  split_dir: data/processed/mimic4_splits
+  dx_file: dx.seqs.pkl
+  proc_file: proc.seqs.pkl
+  treat_file: treat.seqs.pkl
+  demo_file: null
+  severity_file: null
+  notes_file: null
+  vocab_file: vocab.pkl
+  max_visits: 50
+  min_visits: 2
+
+model:
+  d_embed: 256
+  d_text: 256
+  d_fuse: 512
+  dropout: 0.1
+  n_heads: 8
+  temporal: transformer
+  med2vec_compat: true
+  text_enabled: false
+  share_code_embeddings: true
+  use_demo: false
+
+loss:
+  lambda_intra: 0.2
+  lambda_text: 0.0
+  lambda_sup: 0.0
+
+optim:
+  lr: 0.0001
+  weight_decay: 0.01
+  betas: [0.9, 0.999]
+  batch_size_patients: 16
+  max_epochs: 10
+  grad_clip: 1.0
+  warmup_epochs: 1
+
+eval:
+  recall_ks: [5, 10, 30]
+  precision_ks: [5, 10, 30]
+  ndcg_ks: [5, 10, 30]
+  baseline_top_codes: 250
+  save_preds: true
+
+logging:
+  log_dir: runs/med2vec_only
+  ckpt_dir: ckpts_med2vec_only
