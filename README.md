@@ -1,4 +1,4 @@
-# med2vec_plus (full pipeline)
+# Med2Vec+
 
 This repository contains:
 - Cohort selection tool for MIMIC-IV (CSV and Postgres engines).
