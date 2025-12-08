@@ -15,9 +15,9 @@ data:
   max_note_len: 2048
 
 model:
-  d_embed: 256
+  d_embed: 128
   d_text: 256
-  d_fuse: 512
+  d_fuse: 384
   dropout: 0.1
   n_heads: 8
   temporal: transformer
@@ -27,24 +27,24 @@ model:
   use_demo: true
 
 loss:
-  lambda_intra: 0.2
-  lambda_text: 0.1
-  lambda_sup: 1.0
+  lambda_intra: 0.05
+  lambda_text: 0.01
+  lambda_sup: 0
 
 optim:
   lr: 0.0001
   weight_decay: 0.01
   betas: [0.9, 0.999]
-  batch_size_patients: 16
-  max_epochs: 10
+  batch_size_patients: 32
+  max_epochs: 20
   grad_clip: 1.0
-  warmup_epochs: 1
+  warmup_epochs: 3
 
 eval:
   recall_ks: [5, 10, 30]
   precision_ks: [5, 10, 30]
   ndcg_ks: [5, 10, 30]
-  baseline_top_codes: 250
+  baseline_top_codes: 1000000
   save_preds: true
 
 logging:
