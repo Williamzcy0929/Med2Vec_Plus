@@ -17,7 +17,7 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ## Table of Contents
 
-- [Med2Vec+ Model](#med2vec+-model)
+- [Model Info](#model-info)
 - [Repository Layout](#repository-layout)
 - [Installation](#installation)
 - [Data Prerequisites](#data-prerequisites)
@@ -29,7 +29,7 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ---
 
-## Med2Vec+ Model
+## Model Info
 
 ### Inputs Per Patient
 
