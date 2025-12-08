@@ -1,6 +1,7 @@
 # Med2Vec+
 
-**Med2Vec+** is a  pipeline that prepares **MIMIC-IV** EHR data and trains a **EHR Codes+ Clinical Notes** sequence model. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.
+**Med2Vec+** is a  pipeline that prepares **MIMIC-IV** EHR data and trains a **EHR Codes+ Clinical Notes** sequence model. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.  
+
 Med2Vec+ is also released as an open-source model on [Hugging Face](https://huggingface.co/Williamzcy0929/Med2Vec_Plus).
 
 ## What It Does
