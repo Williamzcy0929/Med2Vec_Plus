@@ -38,7 +38,7 @@ A sequence of visits where each visit contains:
 - Patient **demographics** (age, gender, ethnicity)
 - **Routed note segments**: diagnosis/procedure/treatment/assessment-plan text
 
-### Architecture (Med2Vec+)
+### Architecture
 
 - **Code encoders**: Learnable embeddings for diagnosis/procedure/treatment codes (optional shared or separate)
 - **Text encoder**: BERT-family encoder (e.g., `emilyalsentzer/Bio_ClinicalBERT`) to embed routed note aspects
