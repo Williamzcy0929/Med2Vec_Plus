@@ -4,7 +4,7 @@ from .code_embed import NonNegEmbedding
 from .visit_encoder import VisitEncoder
 from .text_encoder import HFSectionTextEncoder, GRUTextEncoder
 from .cross_attention import CrossAttentionGate
-from .temporal import GRUTemporal
+from .temporal import TemporalEncoder
 from .fusion import AspectFusion
 from .heads import MultiLabelHead, RiskHead
 from .losses import bce_next_visit_loss, severity_loss, intra_visit_cooccur_loss, text_align_infonce
@@ -47,7 +47,19 @@ class Med2VecPlus(nn.Module):
             self.align_proj = None
 
         if not med2vec_compat:
-            self.temporal = nn.ModuleDict({a: GRUTemporal(d_embed, dropout=dropout) for a in ASPECTS})
+            self.temporal = nn.ModuleDict(
+                {
+                    a: TemporalEncoder(
+                        d_model=d_embed,
+                        mode=temporal,
+                        n_layers=1,
+                        n_heads=n_heads,
+                        dropout=dropout,
+                        bidirectional=False
+                    )
+                    for a in ASPECTS
+                }
+            )
         else:
             self.temporal = None
 
