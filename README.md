@@ -17,7 +17,7 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ## Table of Contents
 
-- [Model at a Glance](#model-at-a-glance)
+- [Med2Vec+ Model](#med2vec+-model)
 - [Repository Layout](#repository-layout)
 - [Installation](#installation)
 - [Data Prerequisites](#data-prerequisites)
@@ -31,7 +31,7 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ## Med2Vec+ Model
 
-### Inputs per Patient
+### Inputs Per Patient
 
 A sequence of visits where each visit contains:
 - Three **code sets**: diagnosis / procedures / treatments
