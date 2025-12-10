@@ -128,7 +128,7 @@ You must have **approved access** to [MIMIC-IV v2.x](https://physionet.org/conte
 
 ## Quick Start
 
-### Step 1: Build Routed Notes + Cohort + Splits
+### Build Routed Notes + Cohort + Splits
 
 ```bash
 python scripts/discharge_only_pipeline.py \
@@ -143,7 +143,7 @@ python scripts/discharge_only_pipeline.py \
   --pooling cls --max_length 256 --batch_size 16
 ```
 
-### Step 2: Create Code Sequences & Vocabularies
+### Create Code Sequences & Vocabularies
 
 ```bash
 python scripts/prepare_mimic_iv.py \
@@ -153,7 +153,7 @@ python scripts/prepare_mimic_iv.py \
   --use_train_vocab_only
 ```
 
-### Step 3: Train Med2Vec+
+### Train Med2Vec+
 
 ```bash
 python -m src.med2vec_plus.train --config configs/default.yaml
@@ -161,7 +161,7 @@ python -m src.med2vec_plus.train --config configs/default.yaml
 # TensorBoard logs saved to runs/med2vec_plus/
 ```
 
-### Step 4: Evaluate Model
+### Evaluate Model
 
 ```bash
 python -m src.med2vec_plus.evaluate \
@@ -170,7 +170,7 @@ python -m src.med2vec_plus.evaluate \
   --split test
 ```
 
-### Step 5: Calibrate Probabilities (Optional)
+### Calibrate Probabilities
 
 ```bash
 # Fit calibrator on validation set
@@ -298,7 +298,7 @@ The model predicts three aspects: **diagnosis**, **procedures**, **treatments** 
 - **Platt scaling**: Per-class logistic regression
 - **Isotonic regression**: Per-class non-parametric calibration
 
-Calibrators are fit on validation predictions and applied to test set.
+Calibrators are fit on validation predictions and applied to the test set.
 
 ---
 
