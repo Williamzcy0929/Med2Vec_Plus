@@ -1,6 +1,6 @@
 # Med2Vec+
 
-**Med2Vec+** is a representation learning model that has the capacity of **EHR codes+Clinical Notes** on **MIMIC-IV**. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.  
+**Med2Vec+** is a representation learning model that has the capacity of **EHR codes+Clinical Notes** on **MIMIC-IV**. It reproduces Med2Vec-style representation while extending Med2Vec with clinical notes via aspect-level attention.  
 
 Med2Vec+ and its model weights are also published on [Hugging Face](https://huggingface.co/Williamzcy0929/Med2Vec_Plus)
 
@@ -34,8 +34,8 @@ Med2Vec+ and its model weights are also published on [Hugging Face](https://hugg
 ### Inputs per Patient
 
 A sequence of visits where each visit contains:
-- Three **code sets**: diagnosis / procedures / treatments
-- Patient **demographics** (age, gender, ethnicity)
+- Three **code sets**: diagnosis (DX) / procedures (PROC) / treatments (TREAT)
+- Patient **demographics** (age, gender, ethnicity, etc.)
 - **Routed note segments**: diagnosis/procedure/treatment/assessment-plan text
 
 ### Architecture
