@@ -1,8 +1,6 @@
 # Med2Vec+
 
-**Med2Vec+** is a  pipeline that prepares **MIMIC-IV** EHR data and trains a **EHR Codes+ Clinical Notes** sequence model. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.  
-
-Med2Vec+ is also released as an open-source model on [Hugging Face](https://huggingface.co/Williamzcy0929/Med2Vec_Plus).
+**Med2Vec+** is a representation learning model that has the capacity of **EHR codes+Clinical Notes** on **MIMIC-IV**. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.
 
 ## What It Does
 
@@ -17,7 +15,7 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ## Table of Contents
 
-- [Model Info](#model-info)
+- [Model at a Glance](#model-at-a-glance)
 - [Repository Layout](#repository-layout)
 - [Installation](#installation)
 - [Data Prerequisites](#data-prerequisites)
@@ -29,9 +27,9 @@ Med2Vec+ is also released as an open-source model on [Hugging Face](https://hugg
 
 ---
 
-## Model Info
+## Med2Vec+ Model
 
-### Inputs Per Patient
+### Inputs per Patient
 
 A sequence of visits where each visit contains:
 - Three **code sets**: diagnosis / procedures / treatments
@@ -191,7 +189,7 @@ python -m src.med2vec_plus.evaluate \
 
 ### Using Offline HuggingFace Models
 
-Place your model under `/hf_models/Bio_ClinicalBERT` and configure:
+Place your model under `/root/hf_models/Bio_ClinicalBERT` and configure:
 
 ```yaml
 # In configs/default.yaml
@@ -302,12 +300,6 @@ Calibrators are fit on validation predictions and applied to test set.
 
 ---
 
-### Embedding Shape Mismatch on Visualization
-
-Use the same config/checkpoint pair you trained with. Don't mix "med2vec_only" checkpoint with "plus" config.
-
----
-
 ## MIMIC-IV Variables Used
 
 ### Hospital (hosp) Tables
@@ -325,18 +317,6 @@ Use the same config/checkpoint pair you trained with. Don't mix "med2vec_only" c
 
 ---
 
-## Citation
-
-If you use this repository, please cite:
-
-**Med2Vec**: Choi et al., "Multi-layer Representation Learning for Medical Concepts", KDD 2016.
-
-**MIMIC-IV**: Johnson, A., Bulgarelli, L., Pollard, T., Horng, S., Celi, L. A., & Mark, R. (2023). MIMIC-IV (version 2.2). PhysioNet.
-
-**Med2Vec+**
-
----
-
 ## License
 
 This code is released under the **MIT License** (see [LICENSE](LICENSE)).
@@ -345,7 +325,13 @@ This code is released under the **MIT License** (see [LICENSE](LICENSE)).
 
 ---
 
-## Contributing
+## Acknowledgments
+Thanks to:
+
+- The MIMIC team at MIT for maintaining this invaluable resource
+- The open-source community: PyTorch, scikit-learn, HuggingFace Transformers
+
 Authors: Changyue (William) Zhao, Juncheng Yang, Guangxuan Chen, Minzhao Li
+Department of Biostatistics and Bioinformatics, School of Medicine, Duke University
 
 **Questions or Issues?** Open an issue on GitHub or [contact the maintainers](mailto:changyue.zhao@duke.edu).
