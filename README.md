@@ -331,7 +331,7 @@ Thanks to:
 - The MIMIC team at MIT for maintaining this invaluable resource
 - The open-source community: PyTorch, scikit-learn, HuggingFace Transformers
 
-Authors: Changyue (William) Zhao, Juncheng Yang, Guangxuan Chen, Minzhao Li
+Authors: Changyue (William) Zhao, Juncheng Yang, Guangxuan Chen, Minzhao Li  
 Department of Biostatistics and Bioinformatics, School of Medicine, Duke University
 
 **Questions or Issues?** Open an issue on GitHub or [contact the maintainers](mailto:changyue.zhao@duke.edu).
