@@ -1,6 +1,8 @@
 # Med2Vec+
 
-**Med2Vec+** is a representation learning model that has the capacity of **EHR codes+Clinical Notes** on **MIMIC-IV**. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.
+**Med2Vec+** is a representation learning model that has the capacity of **EHR codes+Clinical Notes** on **MIMIC-IV**. It reproduces Med2Vec-style next-visit prediction while extending it with clinical notes via aspect-aligned cross-attention.  
+
+Med2Vec+ and its model weights are also published on [Hugging Face](https://huggingface.co/Williamzcy0929/Med2Vec_Plus)
 
 ## What It Does
 
